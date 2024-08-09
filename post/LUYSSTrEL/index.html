@@ -1,0 +1,305 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>如何搭建ss | ArtemisiaのBlog</title>
+
+<link rel="shortcut icon" href="https://www.artemisia.us.kg/favicon.ico?v=1723209562132">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.artemisia.us.kg/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            ArtemisiaのBlog
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://www.artemisia.us.kg/tag/Ehm-HOX2K" class="menu gt-a-link">
+                            Python
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://www.artemisia.us.kg/tag/hZ1O5Fa-X" class="menu gt-a-link">
+                            Linux
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            友链
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1723209562132" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    如何搭建ss
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2024-08-06 ·
+                    </time>
+                    
+                        <a href="https://www.artemisia.us.kg/tag/faxuEcXp1/" class="post-tags">
+                            # 服务器
+                        </a>
+                    
+                        <a href="https://www.artemisia.us.kg/tag/hZ1O5Fa-X/" class="post-tags">
+                            # Linux
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>用CentOS7配置Shadowsocks服务</p>
+<!-- more -->
+<h2 id="前言">前言</h2>
+<p>Shadowsocks(ss)是当前比较受欢迎的科学上网工具，配置好ss后，Google，Facebook，就可翻过去，本文将介绍如何在 CentOS 7 下安装和配置Shadowsocks服务。如果需要科学上网，当前服务器必须不在墙内，否则无法达到预期效果。</p>
+<h2 id="安装">安装</h2>
+<h3 id="安装epel和pip">安装epel和pip</h3>
+<pre><code class="language-sh">sudo yum -y install epel-release
+sudo yum -y install python-pip
+</code></pre>
+<h3 id="安装shadowsocks">安装shadowsocks</h3>
+<pre><code class="language-sh">pip install --upgrade pip
+pip install shadowsocks
+</code></pre>
+<h2 id="配置服务端">配置服务端</h2>
+<h3 id="创建配置文件">创建配置文件</h3>
+<pre><code class="language-sh">vim /etc/shadowsocks.json
+</code></pre>
+<p>并在其中添加如下内容：</p>
+<pre><code class="language-json">{
+  &quot;server&quot;: &quot;0.0.0.0&quot;,
+  &quot;server_port&quot;: 8388,
+  &quot;local_address&quot;: &quot;127.0.0.1&quot;,
+  &quot;local_port&quot;: 1080,
+  &quot;password&quot;: &quot;mypassword&quot;,
+  &quot;timeout&quot;: 300,
+  &quot;method&quot;: &quot;aes-256-cfb&quot;,
+  &quot;fast_open&quot;: false
+}
+</code></pre>
+<p>说明：</p>
+<ul>
+<li>server：服务端监听地址，默认全字段</li>
+<li>server_port：服务端端口，范围0-65535，任选一个端口，只要不与常用端口冲突就行，不过不推荐使用80\443等网站用端口，也不推荐大多数ss的默认端口8388</li>
+<li>local_address：本地监听地址，默认即可，不用更改</li>
+<li>local_port：本地监听端口，需要跟其他进程不重复，不用更改</li>
+<li>password：密码</li>
+<li>timeout：超时时间（秒），不用更改</li>
+<li>method：加密方法，可选aes-128-cfb, aes-192-cfb, aes-256-cfb, bf-cfb, cast5-cfb, des-cfb, rc4-md5, chacha20, salsa20, rc4, table，不推荐默认，因为默认的太多人用，容易被墙，还请修改</li>
+<li>fast_open：是否启用TCP-Fast-Open，true或者false，默认为false</li>
+</ul>
+<h3 id="配置多个用户">配置多个用户</h3>
+<p><strong>ps：可选，并非一定要配置，如果只有自己一个人用，就不用此配置</strong><br>
+使用多端口多密码配置，彼此没有干扰，修改相应内容如下：</p>
+<pre><code class="language-json">{
+    &quot;server&quot;:&quot;0.0.0.0&quot;,
+    &quot;port_password&quot;:{
+     &quot;端口1&quot;:&quot;密码1&quot;,
+     &quot;端口2&quot;:&quot;密码2&quot;,
+     &quot;端口3&quot;:&quot;密码3&quot;,
+     &quot;端口4&quot;:&quot;密码4&quot;
+     },
+    &quot;timeout&quot;:300,
+    &quot;method&quot;:&quot;aes-256-cfb&quot;,
+    &quot;fast_open&quot;: false
+}
+</code></pre>
+<p>脚本使用json语言，每一行必须以逗号结尾，但最后一行不用逗号结尾。</p>
+<h3 id="配置自启动">配置自启动</h3>
+<p>新建启动脚本文件</p>
+<pre><code class="language-sh">vim /etc/systemd/system/shadowsocks.service
+</code></pre>
+<p>添加内容如下：</p>
+<pre><code>[Unit]
+Description=Shadowsocks
+
+[Service]
+TimeoutStartSec=0
+ExecStart=/usr/bin/ssserver -c /etc/shadowsocks.json
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>执行以下命令启动 shadowsocks 服务：</p>
+<pre><code class="language-sh">systemctl enable shadowsocks
+systemctl start shadowsocks
+</code></pre>
+<p>检查 shadowsocks 服务：</p>
+<pre><code class="language-sh">systemctl status shadowsocks -l
+</code></pre>
+<p>若回显 active (running) 则启动成功</p>
+<h2 id="客户端配置">客户端配置</h2>
+<p><a href="https://github.com/shadowsocks/shadowsocks-windows/release">Windows版</a>，<a href="https://github.com/shadowsocks/shadowsocks-android/releases">Android版</a>，<a href="https://github.com/shadowsocks/shadowsocks-iOS/releases">iOS版</a>，<a href="https://github.com/shadowsocks/ShadowsocksX-NG/releases/tag/v1.10.2">MacOS版</a>或者使用AppStore搜索OpenWingy这个软件。</p>
+<h3 id="使用">使用</h3>
+<p>运行shadowsocks客户端程序后，添加对应的服务器地址，端口，密码和加密方式，点击应用并保存即可使用，电脑端在托管小图标处右键，一般推荐选择系统代理中的PAC模式。</p>
+<h2 id="参考文档">参考文档</h2>
+<p>curder的GitHubPage：https://curder.github.io/blog/os/centos/centos7/installing-configuration-shadowsocks-under-centos-7.html<br>
+老雷的早起搬砖文档：https://morning.work/page/2015-12/install-shadowsocks-on-centos-7.html<br>
+温锦瑜的博客：https://www.wenjinyu.me/centos-build-shadowsocks-shadowsocksr</p>
+<h2 id="声明">📢声明</h2>
+<p><strong>若要引用此篇文档请注明地址：https://www.artemisia.us.kg/post/LUYSSTrEL</strong></p>
+
+                </div>
+            </article>
+        </div>
+
+        
+
+        
+            <span id="/post/LUYSSTrEL/" class="leancloud_visitors" data-flag-title="如何搭建ss">
+                <em class="post-meta-item-text">阅读量 </em>
+                <i class="leancloud-visitors-count">0</i>
+            </span>
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'YjPP79jOajIw18vmEErAsPx7-gzGzoHsz',
+		appKey: 'W8fWC58z1sjiBCkf3y4ZIcT8',
+		avatar: 'identicon',
+		pageSize: 5,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">A place for peace</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/xlinkexe" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        本站所有资源只做交流学习使用，侵权请联系删除
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://www.artemisia.us.kg/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

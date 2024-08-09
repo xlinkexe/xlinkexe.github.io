@@ -1,0 +1,550 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>随身WiFi刷Linux领京东豆 | ArtemisiaのBlog</title>
+
+<link rel="shortcut icon" href="https://www.artemisia.us.kg/favicon.ico?v=1723209562132">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.artemisia.us.kg/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            ArtemisiaのBlog
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://www.artemisia.us.kg/tag/Ehm-HOX2K" class="menu gt-a-link">
+                            Python
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://www.artemisia.us.kg/tag/hZ1O5Fa-X" class="menu gt-a-link">
+                            Linux
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            友链
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1723209562132" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    随身WiFi刷Linux领京东豆
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2024-08-05 ·
+                    </time>
+                    
+                        <a href="https://www.artemisia.us.kg/tag/hZ1O5Fa-X/" class="post-tags">
+                            # Linux
+                        </a>
+                    
+                        <a href="https://www.artemisia.us.kg/tag/C5iZ2p2Y1/" class="post-tags">
+                            # 随身WiFi
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>关于用随身WiFi薅羊毛的笔记</p>
+<!-- more -->
+<h3 id="1查看随身wifi芯片型号">1，查看随身WiFi芯片型号</h3>
+<p>随身WiFi：芯片最好为高通410或者中兴微，可通过主板芯片上印刷的&quot;Qualcomm&quot;或&quot;zxlc&quot;字样辨认，其他品牌类型的芯片可玩性不大，上手难度较高，并不推荐。<strong>（本教程以高通410为例）</strong></p>
+<h3 id="2下载必要工具">2，下载必要工具</h3>
+<p>包括：<br>
+<a href="https://pan.quark.cn/s/2681a6923909">随身WiFi助手</a>（来自@酷铵水遍大佬）<br>
+<a href="https://pan.quark.cn/s/576e5fccccfa">随身WiFi Debian固件</a><br>
+<a href="https://pan.quark.cn/s/631323a0be44">随身WiFi OpenWRT固件</a><br>
+<a href="https://mobaxterm.mobatek.net">SSH连接工具MobaXterm(官网)</a>（可自行下载其他连接工具）</p>
+<h3 id="3对随身wifi进行基础配置">3，对随身WiFi进行基础配置</h3>
+<h4 id="a解压文件">a.解压文件：</h4>
+<p>将随身WiFi插入电脑，并解压随身WiFi助手，得到一个文件夹，点开，找到<strong>随身WiFi助手.bat</strong>文件运行。</p>
+<h4 id="b查看基本信息">b.查看基本信息：</h4>
+<p>接着输入 01 运行，在这里可查看一些基本信息，若看不到主板型号可以对棒子拆壳后在随身WiFi的主板上查看。</p>
+<h4 id="c安装驱动">c.安装驱动：</h4>
+<p>输入 1 回车，接着再输入 1 回车，并安装弹出的vivo驱动。</p>
+<h4 id="d开启随身wifi的adb">d.开启随身WiFi的ADB：</h4>
+<p>回到随身WiFi助手首页，输入 02 回车，再根据品牌主板选择对应选项即可，接着会让你输入随身WiFi后台地址（设备包装上会写），高通410的输入192.168.1.1，回车，结束后回到首页。</p>
+<h3 id="4对随身wifi进行备份设备变砖时会用到">4，对随身WiFi进行备份（设备变砖时会用到）</h3>
+<h4 id="a进入9008模式">a.进入9008模式：</h4>
+<p>运行<strong>随身WiFi助手.bat</strong>文件，输入 05 回车，接着输入 1 回车，可以在设备管理器中的端口里查看设备是否进入9008模式，接着输入 1 回车打开miko进行备份，若打不开，可以点击我分享的链接下载<a href="https://pan.quark.cn/s/0d0faddb357d">miko工具</a>。</p>
+<h4 id="b用miko工具进行备份">b.用miko工具进行备份：</h4>
+<p>点击上方<strong>Read</strong>，接着点击<strong>Partition Backup/Erase</strong>，然后点击<strong>Load Partition Structure</strong>读取设备信息，接着在上方把所有系统文件打上对勾，双击<strong>Firmware Folder Path</strong>选择一个文件夹存放固件接着点击<strong>Read Full Image</strong>，随便填个名字（例如“WIFI”），点击保存，固件就开始备份了。（备份时间会比较久，请耐心等待进度条跑完❤️）<br>
+具体救砖方法补充：<br>
+点击 Loader.exe 打开miko工具，点击Flash，选择 emmc block0 flasher ，按照提示双击打开文件夹，选择之前所保存的.bin文件，最后点击 FLASH! 开始救砖（请耐心等待进度条跑完❤️）<br>
+<img src="https://www.artemisia.us.kg/post-images/1722908897399.png" alt="" loading="lazy"></p>
+<h3 id="5切卡可选">5，切卡（可选）</h3>
+<p>插拔一下随身WiFi让它重启，如果你想在刷机后用自己的手机卡来作为热点，那么还需要到随身WiFi后台切下卡，具体方式每个品牌都不相同，请搜索自己的随身WiFi型号+切卡方式来查找。</p>
+<h3 id="6刷入debian">6，刷入Debian</h3>
+<h4 id="a准备工作">a.准备工作：</h4>
+<p>确保你的随身WiFi是以正常模式（即9091模式）连接到电脑而非刷机模式（即9008模式），接着将随身WiFi的固件压缩包解压选择UZ801（其他请根据具体情况自行选择）。</p>
+<h4 id="b刷入系统">b.刷入系统：</h4>
+<p>点开UZ801文件夹（点开后应显示系统文件），在其上方点击地址栏，输入<strong>cmd</strong>并回车，接着输入运行框内输入<strong>adb devices</strong>查看设备是否连接，若<strong>List of devices attached</strong>下方无任何显示，则说明前面有步骤做错了，请仔细核对步骤。然后输入<strong>adb reboot bootloader</strong>让设备重启到刷机模式，完成后退出运行框，回到固件文件夹内点击<strong>flash.bat</strong>文件运行（Linux或MacOS系统应点击<strong>flash.sh</strong>文件运行），点开后运行框会提示按任意键继续，一直回车就行了，期间会听到“咚咚”的声音，这说明设备在不断重连，一直到显示<strong>all done!!</strong>，就表示刷机完成了，此时设备会自动重启。</p>
+<h4 id="c更新驱动">c.更新驱动：</h4>
+<p>注意：此时会有三种情况，请按照对应情况依次序进行！！！（需在设备管理器上查看）</p>
+<p>Android Device里显示Android ADB Interface：鼠标右键点击Android ADB Interface选择卸载，弹出的框框打上勾，并确定卸载，卸载完成后重新插拔一下随身WiFi，来到下一种情况⬇️</p>
+<p>其他设备里显示RNDIS：右键它选择更新驱动程序，选择第二个选项，接着点下边，在可用驱动列表中往下拉找到网络适配器点一下，点击下一步，在厂商这里找到Microsoft，在型号这里选择<strong>基于远程NDIS的Internet共享设备</strong>点击下一步，这里会提示不推荐安装，别管他，点是，完成后关闭窗口，来到下一种情况⬇️</p>
+<p>网络适配器里的基于远程NDIS的Internet共享设备：这就是成功后的情况啦</p>
+<h3 id="7ssh连接随身wifi助手">7，SSH连接随身WiFi助手</h3>
+<p>选择你自己的SSH连接工具即可<br>
+IP:192.168.68.1<br>
+User:root<br>
+Port:22<br>
+Password:1<br>
+<strong>ps：如果你不使用我这个固件，那么请留意固件作者的说明</strong></p>
+<h3 id="8初次连接基本配置修改">8，初次连接基本配置修改</h3>
+<h4 id="a修改网络配置让其可以随时访问">a.修改网络配置（让其可以随时访问）</h4>
+<p>在命令行里输入：</p>
+<pre><code class="language-sh">nmtui
+</code></pre>
+<p>弹出的框框选择编辑连接，找到bridge点进去，选择WiFi并删除，到下方点击确定，接着回到第一页，选择启用连接，点击进去，然后选择你的WiFi，输入密码连接即可，若光标选不了WiFi，把链接里面的usb删掉即可。</p>
+<p>现在，把棒子随便插到一个地方就能访问了（让它哪凉快哪呆着去👻），同局域网内的任何设备都能访问到它的后台，但是，因为切换了网络，所以它的登录IP会改变，不再是192.168.68.1，而是由路由器分配的IP，需要到路由器后台去查看它的IP。</p>
+<p>这里我提供一下TP-LINK的查询方式（其他的请自行上网搜索查询）：<br>
+进入<a href="http://tplogin.cn">TP-LINK后台</a>，输入密码，默认密码为123456，点击DHCP服务器，选择客户端列表，随身WiFi客户端名为openstick，后面就有它的登录IP。</p>
+<h4 id="b解决bug">b.解决BUG：</h4>
+<p>若此时在命令行里输入更新命令&quot;apt update&quot;，会遇到一些报错，提示无法安全的用该源进行更新，这是因为这个Debian固件自带的清华源很老，而清华源进行过一次仓库迁移，如果用这个老源来更新就会这样。<br>
+以下为需要敲的代码，一键解决Debian固件问题：</p>
+<pre><code class="language-sh">echo -e 'nnnnnnnnnn####################################n'
+sudo rm /etc/apt/sources.list
+sudo touch /etc/apt/sources.list
+sudo echo -e &quot;# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释   nndeb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-freen# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-freenndeb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-freen# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-freenndeb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-freen# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-freenndeb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-freen# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free&quot; &gt;&gt; /etc/apt/sources.list
+echo -e '1、默认软件源修改完成！nn'
+sudo sed -i '1c deb http://mirrors.tuna.tsinghua.edu.cn/Adoptium/deb buster main' /etc/apt/sources.list.d/AdoptOpenJDK.list
+gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 843C48A565F8F04B
+sudo gpg --armor --export 843C48A565F8F04B | sudo apt-key add -
+echo -e 'nn2、AdoptOpenJDK报错修复完成！nn'
+sudo sed -i '1c #deb http://repo.mobian-project.org/ bullseye main non-free'  /etc/apt/sources.list.d/mobian.list
+echo -e '3、Mobian源报已屏蔽！'
+echo -e 'nn####################################nn即将开始更新软件源list......n'
+sleep 5
+sudo apt-get update
+echo -e 'nn4、更新软件源list更新完成！'
+echo -e 'nn####################################nn即将开始升级系统程序至最新版......'
+sleep 5
+sudo apt-mark hold openssh-server
+sudo apt-get -y upgrade
+sudo apt-mark unhold openssh-server
+echo -e 'nn5、系统程序更新完成！nn####################################nnnn'
+</code></pre>
+<h3 id="9服务器源更新">9，服务器源更新</h3>
+<p>将服务器换最新版清华源（可选，换成其他源也可）：<br>
+在命令行里输入：</p>
+<pre><code class="language-sh">sudo vim /etc/apt/sources.list
+</code></pre>
+<p>按<strong>i</strong>，然后将文件中内容替换为如下代码：</p>
+<pre><code class="language-sh"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
+deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
+deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free
+deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free
+
+# 以下安全更新软件源包含了官方源与镜像站配置，如有需要可自行修改注释切换
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
+deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
+</code></pre>
+<p>再按 ESC 由编辑模式退出到正常模式，接着输入 :wq 保存并退出<br>
+然后进行更新</p>
+<pre><code class="language-sh">sudo apt update
+sudo apt upgrade
+</code></pre>
+<p>可以用free -h查看运存情况，df -h查看内存情况。</p>
+<h3 id="10安装docker">10，安装Docker</h3>
+<h4 id="a安装docker所需依赖包">a.安装Docker所需依赖包：</h4>
+<pre><code class="language-sh">sudo apt-get -y install ca-certificates curl
+</code></pre>
+<h4 id="b创建etcaptkeyrings目录并下载docker的官方gpg密钥到该目录">b.创建/etc/apt/keyrings目录，并下载Docker的官方GPG密钥到该目录：</h4>
+<pre><code class="language-sh">sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+</code></pre>
+<h4 id="c将docker仓库添加到系统的软件源列表">c.将Docker仓库添加到系统的软件源列表：</h4>
+<pre><code class="language-sh">echo \
+&quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://mirrors.aliyun.com/docker-ce/linux/debian \
+$(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;) stable&quot; | \
+sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</code></pre>
+<h4 id="d更新软件包列表">d.更新软件包列表：</h4>
+<pre><code class="language-sh">sudo apt update
+</code></pre>
+<h4 id="e安装docker">e.安装Docker：</h4>
+<pre><code class="language-sh">sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+</code></pre>
+<h4 id="f执行以下命令检查docker是否安装成功">f.执行以下命令，检查Docker是否安装成功：</h4>
+<pre><code class="language-sh">docker -v
+</code></pre>
+<p>若回显<strong>version</strong>和<strong>build</strong>信息则说明安装成功</p>
+<h4 id="g执行以下命令启动docker服务并设置开机自启动">g.执行以下命令，启动Docker服务，并设置开机自启动：</h4>
+<pre><code class="language-sh">sudo systemctl start docker
+sudo systemctl enable docker
+</code></pre>
+<h4 id="h下面是关于docker命令的一点小补充">h.下面是关于Docker命令的一点小补充：</h4>
+<pre><code class="language-sh">sudo systemctl start docker     #运行Docker守护进程
+sudo systemctl stop docker      #停止Docker守护进程
+sudo systemctl restart docker   #重启Docker守护进程
+sudo systemctl enable docker    #设置Docker开机自启动
+sudo systemctl status docker    #查看Docker的运行状态
+</code></pre>
+<h4 id="idocker切换镜像源">i.Docker切换镜像源：</h4>
+<pre><code class="language-sh">sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json &lt;&lt;-'EOF'
+{
+    &quot;registry-mirrors&quot;: [
+        &quot;https://docker.m.daocloud.io&quot;,
+        &quot;https://dockerproxy.com&quot;,
+        &quot;https://docker.mirrors.ustc.edu.cn&quot;,
+        &quot;https://docker.nju.edu.cn&quot;
+    ]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+</code></pre>
+<p>网速可能较慢，请耐心等待，若镜像源不可用，请自行上网替换</p>
+<h4 id="j重启服务">j.重启服务：</h4>
+<pre><code class="language-sh">systemctl restart docker
+systemctl status docker
+reboot
+</code></pre>
+<p>若回显 active（running） 则说明Docker已启动</p>
+<h3 id="11安装青龙面板">11，安装青龙面板</h3>
+<p>以下为<a href="https://github.com/whyour/qinglong">青龙面板GitHub官方</a>描述：</p>
+<blockquote>
+<p>latest 镜像是基于 alpine 构建，debian 镜像是基于 debian-slim 构建。如果需要使用 alpine 不支持的依赖，建议使用 debian 镜像。</p>
+</blockquote>
+<p>-p 5803:5700，<strong>这里的数可以随意更改但是访问地址需要随之改变（若不懂，请不要随意更改）</strong><br>
+拉取latest版命令（青龙面板最新版）：</p>
+<pre><code class="language-sh">docker run -dit \
+	-v $PWD/ql/data:/ql/data \
+	-p 5803:5700 \
+	-e QlBaseUrl=&quot;/&quot; \
+	-e QlPort=&quot;5700&quot; \
+	--name qinglong \
+	--hostname qinglong \
+	--restart unless-stopped \
+	whyour/qinglong:latest
+</code></pre>
+<p>由于最新版对部分依赖兼容不好，这里提供2.11.3的拉取方法<br>
+拉取2.11.3版命令（根据faker作者所言这是最适合的版本，建议使用该命令）：</p>
+<pre><code class="language-sh">docker run -dit \
+	-v $PWD/ql/data:/ql/data \
+	-p 5803:5700 \
+	-e QlBaseUrl=&quot;/&quot; \
+	-e QlPort=&quot;5700&quot; \
+	--name qinglong \
+	--hostname qinglong \
+	--restart unless-stopped \
+	whyour/qinglong:2.11.3
+</code></pre>
+<p>拉取debian版本命令：</p>
+<pre><code class="language-sh">docker run -dit \
+	-v $PWD/ql/data:/ql/data \
+	-p 5803:5700 \
+	-e QlBaseUrl=&quot;/&quot; \
+	-e QlPort=&quot;5700&quot; \
+	--name qinglong \
+	--hostname qinglong \
+	--restart unless-stopped \
+	whyour/qinglong:debian
+</code></pre>
+<p>查看是否构建成功：</p>
+<pre><code class="language-sh">docker ps
+</code></pre>
+<p>输入</p>
+<pre><code class="language-sh">    reboot
+</code></pre>
+<p>重启一下，表示安装成功</p>
+<h3 id="12配置青龙面板并安装脚本所需依赖">12，配置青龙面板并安装脚本所需依赖</h3>
+<h4 id="a配置青龙面板">a.配置青龙面板：</h4>
+<p>浏览器输入 http://你的服务器登录IP:5803 打开界面，（如果上面端口改了这里也需要改）<br>
+点击开始安装<br>
+通知方式可以跳过<br>
+设置账号密码并登陆</p>
+<h4 id="b安装脚本所需依赖">b.安装脚本所需依赖：</h4>
+<p>在依赖管理中点击新建依赖，自动拆分选择“是”<br>
+依次安装以下依赖：</p>
+<p>Linux依赖：</p>
+<pre><code>bizCode
+bizMsg
+lxml
+libc-dev
+gcc
+g++
+libffi-dev
+python3-dev
+</code></pre>
+<p>Python3依赖：</p>
+<pre><code>bs4
+telethon
+cacheout
+jieba
+PyExecJS
+ping3
+canvas
+Crypto
+ds
+requests
+pycryptodome
+</code></pre>
+<p>NodeJs依赖：</p>
+<pre><code>request
+cheerio
+js-base64
+dotenv
+tough-cookie
+ws@7.4.3
+require
+requests
+date-fns
+ts-md5
+typescript
+json5
+axios@v0.27.2
+crypto-js
+@types/node
+png-js
+node-telegram-bot-api
+fs
+jsdom
+form-data
+jieba
+tslib
+ds
+jsdom -g
+prettytable
+ql
+common
+node-jsencrypt
+juejin-helper
+moment
+global-agent
+</code></pre>
+<p><strong>ps：Python3中的canvas依赖由于青龙面板自带python3版本过高可能安装不成功，不过大部分脚本命令都使用js，所以无伤大雅</strong><br>
+<strong>ps：如果遇到安装失败，请点击右侧按钮重新一个个依次安装</strong><br>
+如果依赖仍无法安装可以进入青龙bash界面，利用命令安装：</p>
+<pre><code class="language-sh">docker exec -it qinglong bash
+</code></pre>
+<p>将pip源永久更换为清华源并更新pip（可自行选择其他源）：</p>
+<pre><code class="language-sh">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip install --upgrade pip
+</code></pre>
+<p>将npm源永久更换为淘宝源（可自行选择其他源）：</p>
+<pre><code class="language-sh">npm config set registry https://registry.npmmirror.com/
+</code></pre>
+<p>安装Python3依赖：</p>
+<pre><code class="language-sh">pip3 install 包名
+</code></pre>
+<p>安装NodeJs依赖：</p>
+<pre><code class="language-sh">npm install 包名
+</code></pre>
+<h3 id="13拉取京东库脚本刷京东豆">13，拉取京东库脚本刷京东豆</h3>
+<h4 id="a拉取京东库">a.拉取京东库：</h4>
+<p>有很多脚本这里提供几个github地址<br>
+脚本项目地址一：https://github.com/shufflewzc/faker2<br>
+脚本项目地址二：https://github.com/shufflewzc/faker3</p>
+<p>拉库前请打开青龙面板-配置文件 第18行 GithubProxyUrl=&quot;&quot; 双引号中的内容清空（2.11.3版本太低，没有这项配置，不用管）</p>
+<p>复制以下拉库命令即可：</p>
+<pre><code>Faker2 助力池版【安全本地sign防CK泄漏】使用助力池请在群里发&quot;助力池&quot; 机器人自动回复教程
+ql repo https://git.metauniverse-cn.com/https://github.com/shufflewzc/faker2.git &quot;jd_|jx_|gua_|jddj_|jdCookie&quot; &quot;activity|backUp&quot; &quot;^jd[^_]|USER|function|utils|sendNotify|ZooFaker_Necklace.js|JDJRValidator_|sign_graphics_validate|ql|JDSignValidator|magic|depend|h5sts&quot; &quot;main&quot;
+
+Faker3 内部互助版【安全本地sign防CK泄漏】
+ql repo https://git.metauniverse-cn.com/https://github.com/shufflewzc/faker3.git &quot;jd_|jx_|gua_|jddj_|jdCookie&quot; &quot;activity|backUp&quot; &quot;^jd[^_]|USER|function|utils|sendNotify|ZooFaker_Necklace.js|JDJRValidator_|sign_graphics_validate|ql|JDSignValidator|magic|depend|h5sts&quot; &quot;main&quot;
+
+Faker4 纯净版 仅包含少量日常内部助力任务 防止运行过多任务掉ck 适合安静挂机
+ql repo https://git.metauniverse-cn.com/https://github.com/shufflewzc/faker4.git &quot;jd_|jx_|gua_|jddj_|jdCookie&quot; &quot;activity|backUp&quot; &quot;^jd[^_]|USER|function|utils|sendNotify|ZooFaker_Necklace.js|JDJRValidator_|sign_graphics_validate|ql|JDSignValidator|magic|depend|h5sts&quot; &quot;main&quot;
+</code></pre>
+<p>点击定时任务并新建任务<br>
+名称随便<br>
+拉取命令在上面<br>
+定时规则为 15 0-23/4 * *  * ，也可自行配置，详见<a href="https://blog.csdn.net/shuai_pi/article/details/123969976">青龙面板定时规则</a><br>
+点击运行，过一段时间会添加定时自动任务脚本</p>
+<h4 id="b填入自己的京东cookies">b.填入自己的京东Cookies：</h4>
+<p>京东Cookies获取方法：<br>
+点击进入<a href="https://m.jd.com">京东</a>（一定是手机版官网，不是电脑版）<br>
+然后用自己的账号登录，登录后按F12，点击Application，点开Cookies<br>
+找到pt_key=?;pt_pin=?;<br>
+把对应的值替换到问号中即可，分号要保留</p>
+<p>回到青龙面板，点击环境变量，点击新建环境变量<br>
+名称设为：JD_COOKIE<br>
+输入获取到Cookies的相关参数<br>
+<strong>ps：填写之后应该是已启用状态，如果不是则说明存在问题，例如cookie过期，需要重新设置</strong></p>
+<p><em><strong>❤️之后便可以愉快地刷京东豆了❤️</strong></em></p>
+<h2 id="参考文档视频">参考文档&amp;视频：</h2>
+<p>在下莫老师的blibili视频：https://www.bilibili.com/video/BV142421Z7gg/?vd_source=7166d3c31745e701e0f26a4ad912d2d0<br>
+在下莫老师的附件表：http://www.zxmls.lol/#/<br>
+清华大学开源软件镜像站：https://mirror.tuna.tsinghua.edu.cn/help<br>
+青龙Faker仓库教程合集：https://thin-hill-428.notion.site/Faker-1c598629675145988b43a37998a1604a<br>
+阿里云官方产品文档：https://help.aliyun.com/zh/ecs/use-cases/install-and-use-docker-on-a-linux-ecs-instance#33f11a5f1800n<br>
+醉尘归大佬的CSDN文档：https://blog.csdn.net/scy_wl/article/details/135893983</p>
+<h2 id="声明">📢声明：</h2>
+<p><strong>若要引用此篇文档请注明地址：https://www.artemisia.us.kg/post/nH2pgI7Tp</strong></p>
+
+                </div>
+            </article>
+        </div>
+
+        
+
+        
+            <span id="/post/nH2pgI7Tp/" class="leancloud_visitors" data-flag-title="随身WiFi刷Linux领京东豆">
+                <em class="post-meta-item-text">阅读量 </em>
+                <i class="leancloud-visitors-count">0</i>
+            </span>
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'YjPP79jOajIw18vmEErAsPx7-gzGzoHsz',
+		appKey: 'W8fWC58z1sjiBCkf3y4ZIcT8',
+		avatar: 'identicon',
+		pageSize: 5,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">A place for peace</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/xlinkexe" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        本站所有资源只做交流学习使用，侵权请联系删除
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://www.artemisia.us.kg/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
