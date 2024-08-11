@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.artemisia.us.kg</id>
+    <title>ArtemisiaのBlog</title>
+    <updated>2024-08-11T08:25:02.306Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://www.artemisia.us.kg"/>
+    <link rel="self" href="https://www.artemisia.us.kg/atom.xml"/>
+    <subtitle>A place for peace</subtitle>
+    <logo>https://www.artemisia.us.kg/images/avatar.png</logo>
+    <icon>https://www.artemisia.us.kg/favicon.ico</icon>
+    <rights>All rights reserved 2024, ArtemisiaのBlog</rights>
+    <entry>
+        <title type="html"><![CDATA[青龙面板每日京豆详情通知]]></title>
+        <id>https://www.artemisia.us.kg/post/7x9mgUbiq/</id>
+        <link href="https://www.artemisia.us.kg/post/7x9mgUbiq/">
+        </link>
+        <updated>2024-08-09T05:45:47.000Z</updated>
+        <summary type="html"><![CDATA[<p>用python写了个发送每日京豆详情到邮箱的小程序</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>用python写了个发送每日京豆详情到邮箱的小程序</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[用Python提取bilibili视频中的字幕]]></title>
+        <id>https://www.artemisia.us.kg/post/rDC6X64l2/</id>
+        <link href="https://www.artemisia.us.kg/post/rDC6X64l2/">
+        </link>
+        <updated>2024-08-06T02:16:15.000Z</updated>
+        <summary type="html"><![CDATA[<p>关于需提取视频字幕的解决办法（此方法经实验只能提取单音轨，若有bgm则不能正确识别）</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>关于需提取视频字幕的解决办法（此方法经实验只能提取单音轨，若有bgm则不能正确识别）</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[随身WiFi刷Linux领京东豆]]></title>
+        <id>https://www.artemisia.us.kg/post/nH2pgI7Tp/</id>
+        <link href="https://www.artemisia.us.kg/post/nH2pgI7Tp/">
+        </link>
+        <updated>2024-08-05T08:41:47.000Z</updated>
+        <summary type="html"><![CDATA[<p>关于用随身WiFi薅羊毛的笔记</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>关于用随身WiFi薅羊毛的笔记</p>
+]]></content>
+    </entry>
+</feed>

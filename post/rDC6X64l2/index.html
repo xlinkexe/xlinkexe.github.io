@@ -1,0 +1,335 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>用Python提取bilibili视频中的字幕 | ArtemisiaのBlog</title>
+
+<link rel="shortcut icon" href="https://www.artemisia.us.kg/favicon.ico?v=1723364701554">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.artemisia.us.kg/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            ArtemisiaのBlog
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            友链
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1723364701554" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    用Python提取bilibili视频中的字幕
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2024-08-06 ·
+                    </time>
+                    
+                        <a href="https://www.artemisia.us.kg/tag/Ehm-HOX2K/" class="post-tags">
+                            # python
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>关于需提取视频字幕的解决办法（此方法经实验只能提取单音轨，若有bgm则不能正确识别）</p>
+<!-- more -->
+<h3 id="1对bilibili视频进行解析">1，对bilibili视频进行解析</h3>
+<p><a href="http://bilibili.b8t.top/">点此进入解析网站</a>（也可自行寻找其他网站）<br>
+<img src="https://www.artemisia.us.kg/post-images/1722912909390.png" alt="" loading="lazy"><br>
+进入后点击登录bilibili账号，选择所需视频，复制其BV号进行解析<br>
+<img src="https://www.artemisia.us.kg/post-images/1722913010510.png" alt="" loading="lazy"><br>
+点击解析，之后下载视频并保存MP4文件<br>
+<img src="https://www.artemisia.us.kg/post-images/1722913219879.png" alt="" loading="lazy"><br>
+<img src="https://www.artemisia.us.kg/post-images/1722913380093.png" alt="" loading="lazy"></p>
+<h3 id="2获取字幕">2，获取字幕</h3>
+<h4 id="准备工作">准备工作：</h4>
+<p>需安装的依赖库：</p>
+<pre><code>pip install moviepy
+pip install SpeechRecognition
+pip install vosk
+</code></pre>
+<details>
+<summary>Windows11安装Python库方法补充</summary>
+进入到python安装目录，
+默认目录为： C:\Users\你的用户名\AppData\Local\Programs\Python\你的Python版本
+（若看不到AppData文件，请在文件夹查看中，把隐藏文件打开）
+进入后右键选择终端打开PowerShell，接着就可以安装依赖库了☀️
+<figure data-type="image" tabindex="1"><img src="https://www.artemisia.us.kg/post-images/1722915715083.png" alt="" loading="lazy"></figure>
+</details>
+<p>需安装的Vosk库语言模型：<br>
+<a href="https://alphacephei.com/vosk/models">点此跳转</a>直接下载需要的就行，一般用有small字样的，下好的文件解压放在项目同目录下即可，下的什么语言就识别什么语言（其实不太严谨。实际上，recognize_vosk()其实还有一个language参数，但如果填一个en-US然后用中文模型的话也是可以的，按中文识别）</p>
+<h4 id="原理使用python将mp4视频文件转化为wav音频文件">原理：使用Python将MP4视频文件转化为WAV音频文件</h4>
+<p>python代码如下：</p>
+<pre><code class="language-python">from moviepy.editor import VideoFileClip
+ 
+def video_to_audio(video_path, audio_path):
+    video_clip = VideoFileClip(video_path)
+    audio = video_clip.audio
+    audio.write_audiofile(audio_path)
+ 
+video_path = '1.mp4'  # 视频文件路径
+audio_path = '2.mp3' # 输出音频文件路径
+ 
+video_to_audio(video_path, audio_path)
+</code></pre>
+<p>在上面的代码中，video_to_audio函数接受输入文件和输出文件的路径作为参数，使用VideoFileClip类打开输入文件并获取音频流，然后使用write_audiofile方法将音频流保存为输出文件，调用该函数并将输入和输出文件路径传递给它。<br>
+<strong>请注意，上面的代码只处理单个音频轨道。如果输入文件包含多个音频轨道（例如，带有多个语言的轨道），则根据需要进一步处理</strong></p>
+<h4 id="原理使用python将wav音频文件转化为srt文件">原理：使用Python将WAV音频文件转化为SRT文件</h4>
+<p>python代码如下：</p>
+<pre><code class="language-python">import speech_recognition as sr
+
+def mp3_to_srt(mp3_file, srt_file):
+    r = sr.Recognizer()
+    with sr.AudioFile(mp3_file) as source:
+        audio = r.record(source)  # 从MP3文件中读取音频数据
+    try:
+        text = r.recognize_google(audio, language=&quot;zh-Hans&quot;)  # 使用Google Speech Recognition引擎识别音频数据中的文本
+        with open(srt_file, &quot;w&quot;) as f:
+            f.write(text)  # 将识别结果写入SRT文件
+        print(&quot;MP3转换为SRT成功！&quot;)
+    except sr.UnknownValueError:
+        print(&quot;无法识别音频数据中的文本。&quot;)
+
+mp3_file = &quot;audio.mp3&quot;
+srt_file = &quot;subtitle.srt&quot;
+mp3_to_srt(mp3_file, srt_file)
+</code></pre>
+<p>以上代码首先导入了speech_recognition库，并定义了一个名为mp3_to_srt的函数。该函数接受两个参数：mp3_file表示输入的MP3文件路径，srt_file表示输出的SRT文件路径。<br>
+函数中首先创建了一个Recognizer对象r，然后使用AudioFile类读取MP3文件中的音频数据到audio对象中。接下来，使用recognize_google方法将音频数据中的文本识别出来，并将结果写入SRT文件，最后提供了一个示例文件路径，并调用mp3_to_srt函数进行转换。转换完成后，会在控制台输出相应的提示。</p>
+<h3 id="3总体修缮后代码如下">3，总体修缮后代码如下：</h3>
+<pre><code class="language-python">from moviepy.editor import VideoFileClip
+from vosk import Model, KaldiRecognizer
+import pyaudio
+import wave
+import json
+
+def video_to_audio(input_file, audio_file):
+    video_clip = VideoFileClip(input_file)
+    audio = video_clip.audio
+    audio.write_audiofile(audio_file)
+
+def audio_to_srt(audio_file, output_file):
+    model = Model(&quot;path/to/model&quot;)  #换成你自己的Vosk语言模型路径
+    wf = wave.open(audio_file, &quot;rb&quot;)
+
+    rec = KaldiRecognizer(model, wf.getframerate())
+    results = []
+    while True:
+        data = wf.readframes(4000)
+        if len(data) == 0:
+            break
+        if rec.AcceptWaveform(data):
+            result = json.loads(rec.Result())
+            results.append(result[&quot;text&quot;])
+    
+    # Final result
+    result = json.loads(rec.FinalResult())
+    results.append(result[&quot;text&quot;])
+
+    # Formatting the results to SRT format
+    formatted_results = []
+    for i, text in enumerate(results):
+        start_time = i * 5  
+        end_time = (i + 1) * 5 - 1
+        formatted_results.append(f&quot;{i+1}\n{format_time(start_time)} --&gt; {format_time(end_time)}\n{text}\n&quot;)
+
+    with open(output_file, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+        f.writelines(formatted_results)
+
+    print(&quot;WAV converted to SRT successfully!&quot;)
+
+def format_time(seconds):
+    hours = seconds // 3600
+    minutes = (seconds % 3600) // 60
+    seconds = seconds % 60
+    milliseconds = 0  
+    return f&quot;{hours:02d}:{minutes:02d}:{seconds:02d},{milliseconds:03d}&quot;
+
+
+input_video = &quot;input.mp4&quot;  # 输入文件保存路径
+audio_output = &quot;audio.wav&quot;  # 音频文件保存路径（可不用更改）
+srt_output = &quot;subtitle.srt&quot;  # 输出文件保存路径
+
+video_to_audio(input_video, audio_output)
+audio_to_srt(audio_output, srt_output)
+</code></pre>
+<p>请将<strong>input_file</strong>、<strong>output_file</strong>变量换成自己所需路径<br>
+<strong>提取完成后用记事本打开.srt文件就能使用啦❤️</strong><br>
+<img src="https://www.artemisia.us.kg/post-images/1722928744278.png" alt="" loading="lazy"></p>
+<h2 id="参考文档视频">参考文档&amp;视频：</h2>
+<p>php是最好的 的百度文档：https://developer.baidu.com/article/details/2798154<br>
+mob64ca12e676c8 的51CTO博客文档：https://blog.51cto.com/u_16213390/7501311<br>
+Carrish的bilibil视频：https://www.bilibili.com/video/BV1Dx421f7He/?vd_source=7166d3c31745e701e0f26a4ad912d2d0<br>
+mzzj 的CSDN文档：https://blog.csdn.net/m0_66509806/article/details/133964003<br>
+vosk的GitHub官方仓库：https://github.com/alphacep/vosk-api</p>
+<h2 id="声明">📢声明</h2>
+<p><strong>若要引用此篇文档请注明地址：https://www.artemisia.us.kg/post/rDC6X64l2</strong></p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://www.artemisia.us.kg/post/nH2pgI7Tp/" class="post-title gt-a-link">
+                    随身WiFi刷Linux领京东豆
+                </a>
+            </div>
+        
+
+        
+            <span id="/post/rDC6X64l2/" class="leancloud_visitors" data-flag-title="用Python提取bilibili视频中的字幕">
+                <em class="post-meta-item-text">阅读量 </em>
+                <i class="leancloud-visitors-count">0</i>
+            </span>
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'YjPP79jOajIw18vmEErAsPx7-gzGzoHsz',
+		appKey: 'W8fWC58z1sjiBCkf3y4ZIcT8',
+		avatar: 'identicon',
+		pageSize: 5,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">A place for peace</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/xlinkexe" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        本站所有资源只做交流学习使用，侵权请联系删除
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://www.artemisia.us.kg/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
